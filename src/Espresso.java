@@ -6,7 +6,18 @@ public class Espresso extends  Coffee{
         this.numberOfShots=numberOfShots;
     }
 
-    public void printEspressoDetails(){
-        System.out.println("You asked for "+numberOfShots+" servings! Every serving of Espresso costs "+price+"$. Your total bill is "+price * numberOfShots+"$");
+    public void grindBeans() {
+        System.out.println("\nGrinding the espresso beans finely...");
     }
+
+    public void brewCoffee() {
+        System.out.println("Brewing the espresso under high pressure...");
+    }
+
+    // Method to print the information about the coffee
+    public void printInfo() {
+        super.printInfo();
+        System.out.println("You asked for " + numberOfShots + " servings!");
+        System.out.println("Every serving of Espresso costs " + price + "$. Your total bill is " + (price * numberOfShots) + "$.");    }
+
 }

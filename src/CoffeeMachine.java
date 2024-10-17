@@ -5,6 +5,8 @@ public class CoffeeMachine {
     public static void main(String[] args) {
 
         Scanner keyboard = new Scanner(System.in);
+        CoffeeMaker cafeCoffeeMaker = new CoffeeMaker();
+
 
         while (true) {
             System.out.println("\nWelcome to the Coffee Machine!");
@@ -34,10 +36,8 @@ public class CoffeeMachine {
                     int numberOfShots = keyboard.nextInt();
 
                     Espresso myEspresso = new Espresso(espressoName,espressoRoast,espressoPrice,numberOfShots);
-                    myEspresso.grindBeans();
-                    myEspresso.brewCoffee();
+                    cafeCoffeeMaker.prepareCoffee(myEspresso);
                     myEspresso.printInfo();
-                    myEspresso.printEspressoDetails();
                     break;
                 case 2:
 
@@ -79,10 +79,8 @@ public class CoffeeMachine {
                     }
 
                     Latte myLatte  =new Latte(latteName,latteRoast,lattePrice,milkType,syrupFlavor);
-                    myLatte.grindBeans();
-                    myLatte.brewCoffee();
+                    cafeCoffeeMaker.prepareCoffee(myLatte);
                     myLatte.printInfo();
-                    myLatte.printLatteDetails();
                     break;
                 case 3:
                     System.out.println("Thank you for using the Coffee Machine!");

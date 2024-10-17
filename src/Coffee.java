@@ -1,4 +1,3 @@
-import java.util.Locale;
 
 public class Coffee {
     String name;
